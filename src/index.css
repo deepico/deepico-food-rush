@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deepico-blue: #2D5BFF;
+  --color-deepico-bg: #0F172A;
+  --color-deepico-surface: #1E293B;
+  --color-deepico-text: #F8FAFC;
+  --color-deepico-success: #22C55E;
+  --color-deepico-danger: #EF4444;
+  --color-deepico-gold: #F59E0B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-deepico-bg);
+  color: var(--color-deepico-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
