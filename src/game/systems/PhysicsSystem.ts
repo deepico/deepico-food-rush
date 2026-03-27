@@ -5,7 +5,6 @@ const CANVAS_HEIGHT = 600;
 const BASKET_Y = CANVAS_HEIGHT - 70;
 const PLAYER_SPEED = 450;
 const BOOST_MAGNET_RANGE = 150;
-const BOOST_DURATION = 2;
 
 export class PhysicsSystem {
   update(dt: number, state: GameState) {

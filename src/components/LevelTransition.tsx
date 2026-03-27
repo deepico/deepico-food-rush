@@ -11,7 +11,7 @@ interface LevelTransitionProps {
 }
 
 export default function LevelTransition({
-  completedLevelIndex,
+  completedLevelIndex: _completedLevelIndex,
   nextLevel,
   score,
   ordersCompleted,

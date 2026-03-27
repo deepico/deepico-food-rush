@@ -24,12 +24,14 @@ export class GameEngine {
   private scoreSystem = new ScoreSystem();
   private orderSystem = new OrderSystem();
   private renderer: GameRenderer;
+  private canvas: HTMLCanvasElement;
   private input: InputManager;
   private onEvent: GameEventCallback;
 
   state: GameState;
 
   constructor(canvas: HTMLCanvasElement, onEvent: GameEventCallback) {
+    this.canvas = canvas;
     this.renderer = new GameRenderer(canvas);
     this.input = new InputManager();
     this.onEvent = onEvent;
@@ -269,7 +271,7 @@ export class GameEngine {
   }
 
   private drawPauseOverlay() {
-    const canvas = this.renderer['canvas'] as HTMLCanvasElement;
+    const canvas = this.canvas;
     const ctx = canvas.getContext('2d')!;
 
     ctx.fillStyle = 'rgba(15, 23, 42, 0.75)';

@@ -6,7 +6,6 @@ interface CanvasProps {
 
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 600;
-const ASPECT = GAME_WIDTH / GAME_HEIGHT;
 
 export default function GameCanvas({ onCanvasReady }: CanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);

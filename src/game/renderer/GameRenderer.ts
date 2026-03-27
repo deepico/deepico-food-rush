@@ -1,4 +1,4 @@
-import type { GameState, LevelConfig, FallingItem, Order, Particle } from '../../types/game';
+import type { GameState, LevelConfig, FallingItem } from '../../types/game';
 
 const W = 800;
 const H = 600;
@@ -10,7 +10,7 @@ export class GameRenderer {
   private bgGradientCache: Map<string, CanvasGradient> = new Map();
   private starField: { x: number; y: number; size: number; speed: number; alpha: number }[] = [];
 
-  constructor(private canvas: HTMLCanvasElement) {
+  constructor(canvas: HTMLCanvasElement) {
     this.ctx = canvas.getContext('2d')!;
     // Generate star field for background
     for (let i = 0; i < 60; i++) {
